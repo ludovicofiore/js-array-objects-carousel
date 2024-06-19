@@ -21,12 +21,11 @@ main {
 
 /* stile immagini */
 .item {
-    width: 100%;
+    width: 900px;
     height: 500px;
     margin: 0 auto;
     display: none;
     position: relative;
-    background-color: grey;
 }
 
 .active {
@@ -40,8 +39,8 @@ main {
 }
 
 .image img {
-    max-width: 100%;
-    object-fit: fill;
+    width: 900px;
+    object-fit: cover;
 }
 
 .text {
