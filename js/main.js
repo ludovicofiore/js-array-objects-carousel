@@ -30,6 +30,31 @@ const images = [
 ];
 
 
+// dichiaro variabile contenitore 
+const imageContainer = document.querySelector(".items-container");
+
+images.forEach(
+    (element) => {
+
+        // creo elementi per item, image e text
+        let divItem = createElementWClass("div", "item");
+        let divImage = createElementWClass("div", "image");
+        let divText = createElementWClass("div", "text");
+
+        // metto immagine in divImage
+        divImage.innerHTML = `<img src="${element.image}">`;
+
+        // metto testo in divText
+        divText.innerHTML = `<h3>${element.title}</h3> <p>${element.text}</p>`;
+
+        // inserivo divImage e divText dentro item
+        divItem.append(divImage, divText);
+        // porto item in pagina
+        imageContainer.append(divItem);
+    }
+);
+
+
 
 
 
