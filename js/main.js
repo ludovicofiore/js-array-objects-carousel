@@ -56,6 +56,90 @@ images.forEach(
 
 
 
+// seleziono elementi item 
+const items = document.getElementsByClassName("item");
+
+// aggiungo classe active al primo elemento
+let activeItem = 0;
+items[activeItem].classList.add("active"); 
+
+
+// getione click per prossima immagine
+
+// dichiaro variabile bottone
+const nextButton = document.getElementById("up");
+
+nextButton.addEventListener("click",
+    function() {
+
+        // verifico di non essere all'ultima immagine
+        if (activeItem < images.length - 1) {
+
+            // elimino classe active da elemento precedente
+            items[activeItem].classList.remove("active"); 
+
+            // incremento valore indice
+            activeItem++;
+
+            // aggiungo classe active
+            items[activeItem].classList.add("active");
+
+        } else if (activeItem = images.length - 1) { //se arrivo all'ultima immagine carousel comincia da capo
+
+            items[activeItem].classList.remove("active"); 
+
+            //valore indice
+            activeItem = 0;
+
+            // aggiungo classe active
+            items[activeItem].classList.add("active");
+            
+        }
+
+    
+    }
+)
+
+
+// gestione click per immagine precedente
+
+// dichiaro variabile bottone
+const previousButton = document.getElementById("down");
+
+previousButton.addEventListener("click",
+    function() {
+        
+
+        // verifico di non essere alla prima immagine
+        if (activeItem > 0 ) {
+
+            // elimino classe active da elemento precedente
+            items[activeItem].classList.remove("active"); 
+
+            // decremento valore indice
+            activeItem--;
+
+            // aggiungo classe active
+            items[activeItem].classList.add("active");
+
+        } else if (activeItem === 0) {  //partendo dalla prima immagine posso andare sull'ultima
+
+            items[activeItem].classList.remove("active"); 
+
+            // valore indice
+            activeItem = images.length - 1;
+
+            // aggiungo classe active
+            items[activeItem].classList.add("active");
+            
+        }
+
+    
+    }
+)
+
+
+
 
 
 // FUNZIONI
