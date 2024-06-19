@@ -1,0 +1,82 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main {
+    width: 60%;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    max-height: 500px;
+    position: relative;
+}
+
+/* stile immagini */
+.item {
+    width: 900px;
+    height: 500px;
+    margin: 0 auto;
+    display: none;
+    position: relative;
+}
+
+.active {
+    display: flex;
+}
+
+.image {
+    width: 900px;
+    height: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.image img {
+    max-width: 100%;
+    max-height: 500px;
+}
+
+.text {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 10px;
+    margin-bottom: 25px;
+    color: white;
+    text-align: right;
+}
+
+
+/* stile frecce */
+.button {
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+#up {
+    top: 0;
+}
+
+
+#down {
+    bottom: 0;
+}
+
+
+.fa-solid {
+    padding: 10px;
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+}
